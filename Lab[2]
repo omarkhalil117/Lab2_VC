@@ -1,0 +1,54 @@
+    git init 
+    git remote add origin git@github.com:omarkhalil117/Lab2_VC.git
+
+1 - create 2 branches (dev / test) 
+    git branch dev
+    git branch test
+  
+2 - create one file on each branch and push changes in remote repo
+    git checkout dev   (switch to branch dev)
+    touch devfile
+    git checkout test
+    touch testfile
+    
+    git push origin dev
+    git push origin test
+    
+3- merge branches and push it to remote
+   git checkout master
+   git merge dev
+   git merge test
+   
+   git push origin main
+ 
+4-remove them localy
+  git branch -d dev
+  git branch -d test
+  
+5- delete from remote repo 
+  git push origin :dev
+  git push origin :test
+
+6- how to checkout another branch without commit changes
+   git switch -f [branch name]
+
+7- create annotated tag
+   git tag -a v1.7 -m "version 1.7"
+ 
+8- push it to remote repo
+   git push origin tag v1.7
+   
+9- Tell me how to list tags
+   git tag
+   
+10- Tell me how to delete tag locally and remotely.
+   local:
+   git tag -d v1.7
+   remote:
+   git push origin --delete v1.7
+   
+11- Add an image in the README.md file
+   using ![alter](image relativepath or image link)
+  
+   
+   
